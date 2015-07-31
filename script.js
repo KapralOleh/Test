@@ -15,17 +15,19 @@ function getRandomColor() {
 }
 //функція створення нового елементу
 function createElement() {
+	var speed =["elem","elem2","elem3","elem4"];
+	var i = Math.floor(Math.random() * 4);	
 	time = Math.floor(Math.random()*(5000-1000)+1000);
 	var newDiv = document.createElement("div");
-	newDiv.setAttribute("class","elem");
+	newDiv.setAttribute("class",speed[i]);
 	var wrap = document.getElementById("wrap");
 	wrap.appendChild(newDiv);
 	newDiv.style.left = leftPosition() + 'px';
 	newDiv.style.backgroundColor = getRandomColor();
 }
 //функція видалення еленентів
-// function deleteNode () {
-// 	document.getElementById("wrap").removeChild(document.getElementById("wrap").children[0]);
-// }
-// setInterval(deleteNode,4000);
+function deleteNode () {
+	document.getElementById("wrap").removeChild(document.getElementById("wrap").children[0]);
+}
+setInterval(deleteNode,4000);
 setInterval(createElement,time);

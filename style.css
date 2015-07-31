@@ -5,12 +5,29 @@
 @-moz-keyframes down { from {top: 0px;} to {top: 540px;} }
 @-webkit-keyframes down { from {top: 0px;} to {top: 540px;} }
 @keyframes down { from {top: 0px;} to {top: 540px;} }
-
-.elem{
+.elem, .elem2, .elem3, .elem4 {
 	width:30px;
 	height:30px;
 	position:absolute;
 	top: 0px;
+}
+.elem{
+	-webkit-animation:spin 4s linear infinite,
+						down 2s linear infinite;
+	-moz-animation:spin 4s linear infinite,
+						down 2s linear infinite;
+	animation:spin 4s linear infinite,
+						down 2s linear infinite;
+}
+.elem2{
+	-webkit-animation:spin 4s linear infinite,
+						down 3s linear infinite;
+	-moz-animation:spin 4s linear infinite,
+						down 3s linear infinite;
+	animation:spin 4s linear infinite,
+						down 3s linear infinite;
+}
+.elem3{
 	-webkit-animation:spin 4s linear infinite,
 						down 4s linear infinite;
 	-moz-animation:spin 4s linear infinite,
@@ -18,7 +35,14 @@
 	animation:spin 4s linear infinite,
 						down 4s linear infinite;
 }
-
+.elem4{
+	-webkit-animation:spin 4s linear infinite,
+						down 5s linear infinite;
+	-moz-animation:spin 4s linear infinite,
+						down 5s linear infinite;
+	animation:spin 4s linear infinite,
+						down 5s linear infinite;
+}
 #wrap {
 	border:1px solid black;
 	width:500px;
